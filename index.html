@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MDJ Studios provides top-tier software and web development solutions, with a focus on user experience and creative digital marketing support.">
+    <meta name="keywords" content="MDJ Studios, software development, web development, user experience, digital marketing, creative support">
+    <meta name="author" content="MDJ Studios">
+    <link rel="icon" href="./imgs/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
+    <title>MDJ Studios - Innovative Software Solutions</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script defer src="./script.js"></script>
-    <title>MDJ Studios</title>
 </head>
-
 <body>
-    <nav>
+    <nav class="white">
         <div class="nav-wrapper black">
-            <a href="#!" class="brand-logo valign-wrapper">
+            <a href="#!" class="brand-logo" title="MDJ Studios">
                 <img class="logo responsive-img circle" src="./imgs/logo.svg" alt="MDJ Studios Logo">
             </a>
-            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger" title="Menu"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact-us">Contact Us</a></li>
+                <li><a href="#services" title="Our Services">Services</a></li>
+                <li><a href="#about" title="About Us">About</a></li>
+                <li><a href="#contact-us" title="Contact Us">Contact Us</a></li>
             </ul>
         </div>
     </nav>
@@ -33,16 +35,99 @@
         <li><a href="#contact-us">Contact Us</a></li>
     </ul>
     <header>
-        <h1>MDJ Studios</h1>
-        <p>Innovative Software Solutions</p>
-    </header>
-    <main>
+        <div class="overlay">
+            <h1>MDJ Studios</h1>
+            <p>Innovative Software Solutions</p>
+            <a href="#contact-us" class="btn waves-effect waves-light black white-text">Contact Us</a>
+        </div>
+    </header>    
+    <main class="container">
+        <section>
+            <h3>Our Promise</h3>
+            At MDJ Studios, we are committed to excellence in every digital endeavor. 
+            Our team promises to deliver top-tier software and web development solutions 
+            that optimize efficiency and enhance your digital presence. 
+            We prioritize user experience by creating engaging and motivating digital 
+            interfaces for your websites, applications, and SaaS products. 
+            With a robust in-house marketing team, we also provide comprehensive creative support, 
+            from graphic design to content production, ensuring your digital communication is impactful and effective. 
+            Trust us to bring your digital aspirations to life, saving time and captivating your audience.
+        </section>
 
+        <section id="services">
+            <h3>Services</h3>
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://images.ctfassets.net/8zfh62cfom7n/5NcP4VrUPwUYCGnQrbw7bo/28e4c80347f9d1a21df5b9cead703601/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg?w=2500&h=1667&q=50&fm=webp" alt="Software/Web Development">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Software/Web Development</span>
+                            <p class="black-text">My team creates exceptional digital experiences using best practices,
+                                resulting in stunning results that save time for clients and their customers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://images.ctfassets.net/8zfh62cfom7n/3MYPFQ1Gap0abY30oTraPT/690e1233042ae1b2960067b6d8a06f54/ux-store-jJT2r2n7lYA-unsplash.jpg?w=2500&h=1668&q=50&fm=webp" alt="Focused on User Experience">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Focused on User Experience</span>
+                            <p class="black-text">My team will create a digital experience that engages your audience and motivates your
+                                organization,
+                                whether it's your website, web application, or SaaS product.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="responsive-img" src="https://images.ctfassets.net/8zfh62cfom7n/1W2AlEDpb7iE01gKKeSJUF/ec989e90baaf74fc17bf79531d9a1253/ben-kolde-bs2Ba7t69mM-unsplash.jpg?w=1728&h=2204&q=50&fm=webp" alt="Creative Support">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Innovative Creative Support</span>
+                            <p class="black-text">My team and I are in-house marketing department.
+                                We are the designers, writers and multimedia producers that create your social media,
+                                all things digital.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact-us">
+            <h3>Contact Us</h3>
+            <div class="row">
+                <form class="col s12" name="contact" method="POST" data-netlify="true">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="name" type="text" class="validate" name="name">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate" name="email">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea id="textarea1" class="materialize-textarea" name="message"></textarea>
+                            <label for="textarea1">Message</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <button class="btn waves-effect waves-light black white-text" type="submit" class="btn">Send</button>
+                        </div>
+                    </div>
+                </form>                
+              </div>
+        </section>
     </main>
 
-    <footer class="page-footer black">
-        <p class="center">Copyright &copy; All Rights Reserved MDJ Studios</p>
+    <footer class="page-footer white">
+        <p class="center black-text">Copyright &copy; All Rights Reserved MDJ Studios</p>
     </footer>
 </body>
-
 </html>

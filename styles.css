@@ -1,49 +1,141 @@
+@font-face {
+    font-family: 'Maven Pro'; 
+    src: url('./MavenPro-VariableFont_wght.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
+    font-family: 'Maven Pro';
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+nav,
+.nav-wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+}
 
-/* .brand-logo {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-} */
+.brand-logo {
+    margin-top: 9px;
+}
 
 .logo {
-    padding-top: 10px;
     max-height: 50px !important;
 }
 
+header,
+main,
+footer {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
 header {
+    max-width: 1000px;
     background-image: url("https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-size: cover;
     background-position: center;
     height: 250px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Ensure the overlay is positioned relative to the header */
+}
+
+header .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    filter: brightness(70%);
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
-header * {
-    /* font-size: 7vmin !important; */
-    background-color: black;
-    padding: .5rem;
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+header h1, header p {
+    color: white; /* Ensures text is clearly visible against the dark overlay */
+    text-align: center;
+    font-weight: 600;
+}
+
+.btn {
+    background-color: #1a237e; /* A deep blue that stands out */
     color: white;
+    margin-top: 20px; /* Space above the button */
+}
+
+
+.btn.black.white-text:hover {
+    background-color: white !important; /* Changes background to white on hover */
+    color: black !important; /* Changes text color to black on hover */
 }
 
 main {
     flex-grow: 1;
 }
 
+.card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    min-height: 255px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.card-content p {
+    text-align: left;
+}
+
+.input-field input[type=text]:focus+label,
+.input-field input[type=email]:focus+label,
+.input-field textarea:focus+label {
+    color: black !important;
+}
+
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus,
+.input-field textarea:focus {
+    border-bottom: 1px solid black !important;
+    box-shadow: 0 1px 0 0 black !important;
+}
+
+section {
+    margin: 5rem 0;
+}
+
 footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 3rem;
 }
