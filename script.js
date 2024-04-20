@@ -19,11 +19,11 @@
             body: new URLSearchParams(new FormData(form)).toString()
         })
             .then(() => {
-                document.querySelector('#contact-us').innerHTML += '<p>Thank you for contacting us, we\'ll follow up with you shortly.</p>';
+                document.querySelector('#contact-us').innerHTML += '<p id="thank-you">Thank you for contacting us, we\'ll follow up with you shortly.</p>';
                 setTimeout(() => {
                     form.style.display = 'block'; 
                     form.reset(); 
-                    document.querySelector('#contact-us p').remove(); 
+                    document.querySelector('#thank-you').remove(); 
                 }, 3000); 
             })
             .catch((error) => alert('Error: ' + error));
