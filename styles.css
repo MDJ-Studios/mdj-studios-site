@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* .brand-logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+} */
+
+.logo {
+    padding-top: 10px;
+    max-height: 50px !important;
+}
+
+header {
+    background-image: url("https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(70%);
+}
+
+header * {
+    /* font-size: 7vmin !important; */
+    background-color: black;
+    padding: .5rem;
+    color: white;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    padding: 3rem;
+}
