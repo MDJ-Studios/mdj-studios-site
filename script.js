@@ -9,29 +9,30 @@
     contactForm.addEventListener('submit', handleSubmit);
 
     // Functions
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault(); 
-        const form = e.target;
-        form.style.display = 'none'; 
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(new FormData(form)).toString()
-        })
-            .then(() => {
-                document.querySelector('#contact-us').innerHTML += '<p id="thank-you">Thank you for contacting us, we\'ll follow up with you shortly.</p>';
-                setTimeout(() => {
-                    form.style.display = 'block'; 
-                    form.reset(); 
-                    document.querySelector('#thank-you').remove(); 
-                }, 3000); 
+        try {
+            await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(new FormData(contactForm)).toString()
+            });
+            contactForm.reset()
+            M.toast({
+                html: 'Thank you! We\'ll be in touch soon!',
+                displayLength: 4000,
+                classes: 'white-text green'
             })
-            .catch((error) => alert('Error: ' + error));
+        } catch (error) {
+            M.toast({html: 'Something went wrong; please try again later'})
+        }
 
         return false; 
     }
 
 
     // Util Functions from Materialize
-    M.Sidenav.init(sideNavElems);
+    M.Sidenav.init(sideNavElems, {
+        preventScrolling: true,
+    });
 })();

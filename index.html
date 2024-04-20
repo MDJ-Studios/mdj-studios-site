@@ -22,17 +22,15 @@
             </a>
             <a href="#" data-target="mobile-nav" class="sidenav-trigger" title="Menu"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="#services" title="Our Services">Services</a></li>
-                <li><a href="#about" title="About Us">About</a></li>
+                <li><a href="#services" title="Services">Services</a></li>
                 <li><a href="#contact-us" title="Contact Us">Contact Us</a></li>
             </ul>
         </div>
     </nav>
 
     <ul class="sidenav" id="mobile-nav">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact-us">Contact Us</a></li>
+        <li><a class="sidenav-close" href="#services">Services</a></li>
+        <li><a class="sidenav-close" href="#contact-us">Contact Us</a></li>
     </ul>
     <header>
         <div class="overlay">
@@ -42,7 +40,7 @@
         </div>
     </header>    
     <main class="container">
-        <section>
+        <section class="container">
             <h3>Our Promise</h3>
             At MDJ Studios, we are committed to excellence in every digital endeavor. 
             Our team promises to deliver top-tier software and web development solutions 
@@ -54,10 +52,10 @@
             Trust us to bring your digital aspirations to life, saving time and captivating your audience.
         </section>
 
-        <section id="services">
+        <section id="services" class="container">
             <h3>Services</h3>
             <div class="row">
-                <div class="col s12 m4">
+                <div class="col s12 m12 l4">
                     <div class="card">
                         <div class="card-image">
                             <img src="https://images.ctfassets.net/8zfh62cfom7n/5NcP4VrUPwUYCGnQrbw7bo/28e4c80347f9d1a21df5b9cead703601/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg?w=2500&h=1667&q=50&fm=webp" alt="Software/Web Development">
@@ -70,7 +68,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m4">
+                <div class="col s12 m12 l4">
                     <div class="card">
                         <div class="card-image">
                             <img src="https://images.ctfassets.net/8zfh62cfom7n/3MYPFQ1Gap0abY30oTraPT/690e1233042ae1b2960067b6d8a06f54/ux-store-jJT2r2n7lYA-unsplash.jpg?w=2500&h=1668&q=50&fm=webp" alt="Focused on User Experience">
@@ -84,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m4">
+                <div class="col s12 m12 l4">
                     <div class="card">
                         <div class="card-image">
                             <img class="responsive-img" src="https://images.ctfassets.net/8zfh62cfom7n/1W2AlEDpb7iE01gKKeSJUF/ec989e90baaf74fc17bf79531d9a1253/ben-kolde-bs2Ba7t69mM-unsplash.jpg?w=1728&h=2204&q=50&fm=webp" alt="Creative Support">
@@ -100,7 +98,7 @@
                 </div>
             </div>
         </section>
-        <section id="contact-us">
+        <section id="contact-us" class="container">
             <h3>Contact Us</h3>
             <div class="row">
                 <form class="col s12" name="contact" method="POST" data-netlify="true">
