@@ -10,10 +10,9 @@
 
     // Functions
     function handleSubmit(e) {
+        e.preventDefault(); 
         const form = e.target;
-        form.style.display = 'none'; // Hide the form
-
-        // Perform the form submission to Netlify
+        form.style.display = 'none'; 
         fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -22,14 +21,14 @@
             .then(() => {
                 document.querySelector('#contact-us').innerHTML += '<p>Thank you for contacting us, we\'ll follow up with you shortly.</p>';
                 setTimeout(() => {
-                    form.style.display = ''; // Show the form again
-                    form.reset(); // Optional: Reset the form fields
-                    document.querySelector('#contact-us p').remove(); // Remove the thank-you message
-                }, 3000); // Display the thank-you message for 3 seconds
+                    form.style.display = ''; 
+                    form.reset(); 
+                    document.querySelector('#contact-us p').remove(); 
+                }, 3000); 
             })
             .catch((error) => alert('Error: ' + error));
 
-        return false; // Prevent traditional form submission
+        return false; 
     }
 
 
