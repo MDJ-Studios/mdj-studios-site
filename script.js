@@ -21,7 +21,7 @@
             .then(() => {
                 document.querySelector('#contact-us').innerHTML += '<p>Thank you for contacting us, we\'ll follow up with you shortly.</p>';
                 setTimeout(() => {
-                    form.style.display = ''; 
+                    form.style.display = 'block'; 
                     form.reset(); 
                     document.querySelector('#contact-us p').remove(); 
                 }, 3000); 
