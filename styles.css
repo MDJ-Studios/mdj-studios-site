@@ -27,7 +27,7 @@ nav,
 }
 
 .brand-logo {
-    margin-top: 9px;
+    margin-top: .5vmax;
 }
 
 .logo {
@@ -50,7 +50,7 @@ section {
 
 header {
     max-width: 1000px;
-    background-image: url("https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-image: url("./imgs/hero-background.webp");
     background-size: cover;
     background-position: center;
     height: 250px;
@@ -64,7 +64,7 @@ header .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.65); 
     display: flex;
     flex-direction: column;
     align-items: center;
