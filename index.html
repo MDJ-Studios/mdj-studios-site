@@ -8,11 +8,11 @@
     <meta name="author" content="MDJ Studios">
     <meta name="robots" content="index, follow">
     <link rel="icon" href="./imgs/logo.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./materialize/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <title>MDJ Studios - Innovative Software Solutions</title>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script defer src="./materialize/js/materialize.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     <script defer src="./script.js"></script>
 </head>
@@ -60,7 +60,7 @@
                 <div class="col s12 m12 l4">
                     <div class="card">
                         <div class="card-image-services">
-                            <img data-placeholder-background="white" class="lozad service-image" data-src="./imgs/software-dev.webp" alt="Software/Web Development">
+                            <img onerror="this.src='fallback.svg';" data-placeholder-background="white" class="lozad service-image" data-src="./imgs/software-dev.webp" alt="Software/Web Development">
                         </div>
                         <div class="card-content">
                             <span class="card-title">Software/Web Development</span>
@@ -73,7 +73,7 @@
                 <div class="col s12 m12 l4">
                     <div class="card">
                         <div class="card-image-services">
-                            <img data-placeholder-background="white" class="lozad service-image" data-src="./imgs/ux-design.webp" alt="Focused on User Experience">
+                            <img onerror="this.src='fallback.svg';" data-placeholder-background="white" class="lozad service-image" data-src="./imgs/ux-design.webp" alt="Focused on User Experience">
                         </div>
                         <div class="card-content">
                             <span class="card-title">Focused on User Experience</span>
@@ -87,7 +87,7 @@
                 <div class="col s12 m12 l4">
                     <div class="card">
                         <div class="card-image-services">
-                            <img data-placeholder-background="white" class="lozad service-image" data-src="./imgs/creative-support.webp" alt="Creative Support">
+                            <img onerror="this.src='fallback.svg';" data-placeholder-background="white" class="lozad service-image" data-src="./imgs/creative-support.webp" alt="Creative Support">
                         </div>
                         <div class="card-content">
                             <span class="card-title">Innovative Creative Support</span>
