@@ -172,6 +172,10 @@ main {
     box-shadow: 0 1px 0 0 black !important;
 }
 
+label {
+    color: black !important;
+}
+
 #contact-us {
     margin-top: 5rem;
 }
