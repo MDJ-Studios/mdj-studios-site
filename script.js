@@ -8,9 +8,11 @@
     const contactForm = document.querySelector('form');
     const footerYear = document.getElementById('footer-year');
     const heroImageElement = document.querySelector('header');
+    const serviceImages = document.querySelectorAll('.service-image');
     
     // ... trigger the load of a image before it appears on the viewport
     observer.triggerLoad(heroImageElement);
+    serviceImages.forEach(image => observer.triggerLoad(image))
 
     // Event Listeners
     contactForm.addEventListener('submit', handleSubmit);
