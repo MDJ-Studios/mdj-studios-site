@@ -6,19 +6,20 @@
     <meta name="description" content="MDJ Studios provides top-tier software and web development solutions, with a focus on user experience and creative digital marketing support.">
     <meta name="keywords" content="MDJ Studios, software development, web development, user experience, digital marketing, creative support">
     <meta name="author" content="MDJ Studios">
-    <link rel="icon" href="./logo.svg" type="image/svg+xml">
+    <link rel="icon" href="./imgs/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <title>MDJ Studios - Innovative Software Solutions</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     <script defer src="./script.js"></script>
 </head>
 <body>
     <nav class="white">
         <div class="nav-wrapper black">
             <a href="#!" class="brand-logo" title="MDJ Studios">
-                <img class="logo responsive-img circle" src="./logo.svg" alt="MDJ Studios Logo">
+                <img class="logo responsive-img circle" src="./imgs/logo.svg" alt="MDJ Studios Logo">
             </a>
             <a href="#" data-target="mobile-nav" class="sidenav-trigger" title="Menu"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
@@ -32,7 +33,7 @@
         <li><a class="sidenav-close" href="#services">Services</a></li>
         <li><a class="sidenav-close" href="#contact-us">Contact Us</a></li>
     </ul>
-    <header>
+    <header class="lozad" data-background-image="./imgs/hero-background.webp">
         <div class="overlay">
             <h1>MDJ Studios</h1>
             <p>Innovative Software Solutions</p>
@@ -57,8 +58,8 @@
             <div class="row">
                 <div class="col s12 m12 l4">
                     <div class="card">
-                        <div class="card-image">
-                            <img src="https://images.ctfassets.net/8zfh62cfom7n/5NcP4VrUPwUYCGnQrbw7bo/28e4c80347f9d1a21df5b9cead703601/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg?w=2500&h=1667&q=50&fm=webp" alt="Software/Web Development">
+                        <div class="card-image-services">
+                            <img class="lozad" data-src="./imgs/software-dev.webp" alt="Software/Web Development">
                         </div>
                         <div class="card-content">
                             <span class="card-title">Software/Web Development</span>
@@ -70,8 +71,8 @@
                 </div>
                 <div class="col s12 m12 l4">
                     <div class="card">
-                        <div class="card-image">
-                            <img src="https://images.ctfassets.net/8zfh62cfom7n/3MYPFQ1Gap0abY30oTraPT/690e1233042ae1b2960067b6d8a06f54/ux-store-jJT2r2n7lYA-unsplash.jpg?w=2500&h=1668&q=50&fm=webp" alt="Focused on User Experience">
+                        <div class="card-image-services">
+                            <img class="lozad" data-src="./imgs/ux-design.webp" alt="Focused on User Experience">
                         </div>
                         <div class="card-content">
                             <span class="card-title">Focused on User Experience</span>
@@ -84,24 +85,34 @@
                 </div>
                 <div class="col s12 m12 l4">
                     <div class="card">
-                        <div class="card-image">
-                            <img class="responsive-img" src="https://images.ctfassets.net/8zfh62cfom7n/1W2AlEDpb7iE01gKKeSJUF/ec989e90baaf74fc17bf79531d9a1253/ben-kolde-bs2Ba7t69mM-unsplash.jpg?w=1728&h=2204&q=50&fm=webp" alt="Creative Support">
+                        <div class="card-image-services">
+                            <img class="lozad" data-src="./imgs/creative-support.webp" alt="Creative Support">
                         </div>
                         <div class="card-content">
                             <span class="card-title">Innovative Creative Support</span>
-                            <p class="black-text">My team and I are in-house marketing department.
-                                We are the designers, writers and multimedia producers that create your social media,
-                                all things digital.
+                            <p class="black-text">
+                                My team and I are in-house marketing department. We are the designers, writers and multimedia producers that create your social media, all things digital.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="contact-us" class="container">
-            <h3>Contact Us</h3>
-            <div class="row">
-                <form class="col s12" name="contact" method="POST" data-netlify="true">
+        <section id="contact-us">
+            <h3 class="center">Contact Us</h3>
+            <div class="row contact-row">
+                <div class="col s12 m4">
+                    <div class="card contact-card">
+                      <div class="card-image">
+                        <img src="./imgs/daniel.jpg">
+                      </div>
+                      <div class="card-content">
+                          <span class="card-title center">Daniel Scott</span>
+                          <span class="card-title center"><small>Engineering/Project Manager</small></span>
+                      </div>
+                    </div>
+                  </div>
+                <form class="col s12 m7" name="contact" method="POST" data-netlify="true">
                     <div class="row">
                         <div class="input-field col s12">
                             <input id="name" type="text" class="validate" name="name">
@@ -116,7 +127,7 @@
                             <label for="textarea1">Message</label>
                         </div>
                         <div class="input-field col s12">
-                            <button class="btn waves-effect waves-light black white-text" type="submit" class="btn">Send</button>
+                            <button class="btn btn-large waves-effect waves-light black white-text" type="submit" class="btn">Send</button>
                         </div>
                     </div>
                 </form>                

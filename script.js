@@ -1,10 +1,16 @@
 (() => {
     // State Variables and Constants
+    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+    observer.observe(); // start observing 
 
     // Cached Element References
     const sideNavElems = document.querySelectorAll('.sidenav');
     const contactForm = document.querySelector('form');
     const footerYear = document.getElementById('footer-year');
+    const heroImageElement = document.querySelector('header');
+    
+    // ... trigger the load of a image before it appears on the viewport
+    observer.triggerLoad(heroImageElement);
 
     // Event Listeners
     contactForm.addEventListener('submit', handleSubmit);
@@ -46,4 +52,5 @@
     M.Sidenav.init(sideNavElems, {
         preventScrolling: true,
     });
+
 })();
